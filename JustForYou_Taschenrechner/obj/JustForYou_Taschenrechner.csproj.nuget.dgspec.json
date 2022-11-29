@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\tmp\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj": {}
+    "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj": {}
   },
   "projects": {
-    "C:\\tmp\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj": {
+    "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\tmp\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
+        "projectUniqueName": "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
         "projectName": "JustForYou_Taschenrechner",
-        "projectPath": "C:\\tmp\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
+        "projectPath": "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
         "packagesPath": "C:\\Users\\bgyb\\.nuget\\packages\\",
-        "outputPath": "C:\\tmp\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner\\obj\\",
+        "outputPath": "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

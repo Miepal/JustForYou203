@@ -44,6 +44,7 @@ namespace JustForYou_Taschenrechner
             this.b_3 = new System.Windows.Forms.Button();
             this.b_return = new System.Windows.Forms.Button();
             this.b_sign = new System.Windows.Forms.Button();
+            this.b_grundrechner = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // l_parameter
@@ -192,11 +193,22 @@ namespace JustForYou_Taschenrechner
             this.b_sign.Text = "+/-";
             this.b_sign.UseVisualStyleBackColor = true;
             // 
+            // b_grundrechner
+            // 
+            this.b_grundrechner.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.b_grundrechner.Location = new System.Drawing.Point(191, 150);
+            this.b_grundrechner.Name = "b_grundrechner";
+            this.b_grundrechner.Size = new System.Drawing.Size(121, 50);
+            this.b_grundrechner.TabIndex = 35;
+            this.b_grundrechner.Text = "Grundrechner öffnen";
+            this.b_grundrechner.UseVisualStyleBackColor = true;
+            // 
             // Eingabemodul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 331);
+            this.Controls.Add(this.b_grundrechner);
             this.Controls.Add(this.b_sign);
             this.Controls.Add(this.b_return);
             this.Controls.Add(this.b_comma);
@@ -236,5 +248,6 @@ namespace JustForYou_Taschenrechner
         private System.Windows.Forms.Button b_3;
         private System.Windows.Forms.Button b_return;
         private System.Windows.Forms.Button b_sign;
+        private System.Windows.Forms.Button b_grundrechner;
     }
 }

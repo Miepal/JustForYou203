@@ -44,13 +44,16 @@ namespace JustForYou_Taschenrechner
             this.b_3 = new System.Windows.Forms.Button();
             this.b_return = new System.Windows.Forms.Button();
             this.b_sign = new System.Windows.Forms.Button();
-            this.b_grundrechner = new System.Windows.Forms.Button();
+            this.b_calc = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // l_parameter
             // 
             this.l_parameter.AutoSize = true;
-            this.l_parameter.Location = new System.Drawing.Point(23, 42);
+            this.l_parameter.Location = new System.Drawing.Point(23, 20);
             this.l_parameter.Name = "l_parameter";
             this.l_parameter.Size = new System.Drawing.Size(134, 15);
             this.l_parameter.TabIndex = 0;
@@ -58,15 +61,15 @@ namespace JustForYou_Taschenrechner
             // 
             // tb_input
             // 
-            this.tb_input.Location = new System.Drawing.Point(163, 39);
+            this.tb_input.Location = new System.Drawing.Point(191, 17);
             this.tb_input.Name = "tb_input";
-            this.tb_input.Size = new System.Drawing.Size(100, 23);
+            this.tb_input.Size = new System.Drawing.Size(105, 23);
             this.tb_input.TabIndex = 1;
             // 
             // b_comma
             // 
             this.b_comma.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_comma.Location = new System.Drawing.Point(135, 262);
+            this.b_comma.Location = new System.Drawing.Point(79, 229);
             this.b_comma.Name = "b_comma";
             this.b_comma.Size = new System.Drawing.Size(50, 50);
             this.b_comma.TabIndex = 32;
@@ -76,9 +79,9 @@ namespace JustForYou_Taschenrechner
             // b_0
             // 
             this.b_0.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_0.Location = new System.Drawing.Point(23, 262);
+            this.b_0.Location = new System.Drawing.Point(23, 229);
             this.b_0.Name = "b_0";
-            this.b_0.Size = new System.Drawing.Size(106, 50);
+            this.b_0.Size = new System.Drawing.Size(50, 50);
             this.b_0.TabIndex = 31;
             this.b_0.Text = "0";
             this.b_0.UseVisualStyleBackColor = true;
@@ -86,7 +89,7 @@ namespace JustForYou_Taschenrechner
             // b_7
             // 
             this.b_7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_7.Location = new System.Drawing.Point(23, 94);
+            this.b_7.Location = new System.Drawing.Point(23, 61);
             this.b_7.Name = "b_7";
             this.b_7.Size = new System.Drawing.Size(50, 50);
             this.b_7.TabIndex = 30;
@@ -96,7 +99,7 @@ namespace JustForYou_Taschenrechner
             // b_8
             // 
             this.b_8.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_8.Location = new System.Drawing.Point(79, 94);
+            this.b_8.Location = new System.Drawing.Point(79, 61);
             this.b_8.Name = "b_8";
             this.b_8.Size = new System.Drawing.Size(50, 50);
             this.b_8.TabIndex = 29;
@@ -106,7 +109,7 @@ namespace JustForYou_Taschenrechner
             // b_9
             // 
             this.b_9.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_9.Location = new System.Drawing.Point(135, 94);
+            this.b_9.Location = new System.Drawing.Point(135, 61);
             this.b_9.Name = "b_9";
             this.b_9.Size = new System.Drawing.Size(50, 50);
             this.b_9.TabIndex = 28;
@@ -116,7 +119,7 @@ namespace JustForYou_Taschenrechner
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(23, 150);
+            this.button6.Location = new System.Drawing.Point(23, 117);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
             this.button6.TabIndex = 27;
@@ -126,7 +129,7 @@ namespace JustForYou_Taschenrechner
             // b_5
             // 
             this.b_5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_5.Location = new System.Drawing.Point(79, 150);
+            this.b_5.Location = new System.Drawing.Point(79, 117);
             this.b_5.Name = "b_5";
             this.b_5.Size = new System.Drawing.Size(50, 50);
             this.b_5.TabIndex = 26;
@@ -136,7 +139,7 @@ namespace JustForYou_Taschenrechner
             // b_6
             // 
             this.b_6.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_6.Location = new System.Drawing.Point(135, 150);
+            this.b_6.Location = new System.Drawing.Point(135, 117);
             this.b_6.Name = "b_6";
             this.b_6.Size = new System.Drawing.Size(50, 50);
             this.b_6.TabIndex = 25;
@@ -146,7 +149,7 @@ namespace JustForYou_Taschenrechner
             // b_1
             // 
             this.b_1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_1.Location = new System.Drawing.Point(23, 206);
+            this.b_1.Location = new System.Drawing.Point(23, 173);
             this.b_1.Name = "b_1";
             this.b_1.Size = new System.Drawing.Size(50, 50);
             this.b_1.TabIndex = 24;
@@ -156,7 +159,7 @@ namespace JustForYou_Taschenrechner
             // b_2
             // 
             this.b_2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_2.Location = new System.Drawing.Point(79, 206);
+            this.b_2.Location = new System.Drawing.Point(79, 173);
             this.b_2.Name = "b_2";
             this.b_2.Size = new System.Drawing.Size(50, 50);
             this.b_2.TabIndex = 23;
@@ -166,7 +169,7 @@ namespace JustForYou_Taschenrechner
             // b_3
             // 
             this.b_3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_3.Location = new System.Drawing.Point(135, 206);
+            this.b_3.Location = new System.Drawing.Point(135, 173);
             this.b_3.Name = "b_3";
             this.b_3.Size = new System.Drawing.Size(50, 50);
             this.b_3.TabIndex = 22;
@@ -176,9 +179,9 @@ namespace JustForYou_Taschenrechner
             // b_return
             // 
             this.b_return.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_return.Location = new System.Drawing.Point(191, 262);
+            this.b_return.Location = new System.Drawing.Point(191, 173);
             this.b_return.Name = "b_return";
-            this.b_return.Size = new System.Drawing.Size(121, 50);
+            this.b_return.Size = new System.Drawing.Size(106, 50);
             this.b_return.TabIndex = 33;
             this.b_return.Text = "als Parameter übergeben";
             this.b_return.UseVisualStyleBackColor = true;
@@ -186,29 +189,62 @@ namespace JustForYou_Taschenrechner
             // b_sign
             // 
             this.b_sign.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_sign.Location = new System.Drawing.Point(191, 94);
+            this.b_sign.Location = new System.Drawing.Point(135, 229);
             this.b_sign.Name = "b_sign";
             this.b_sign.Size = new System.Drawing.Size(50, 50);
             this.b_sign.TabIndex = 34;
             this.b_sign.Text = "+/-";
             this.b_sign.UseVisualStyleBackColor = true;
             // 
-            // b_grundrechner
+            // b_calc
             // 
-            this.b_grundrechner.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_grundrechner.Location = new System.Drawing.Point(191, 150);
-            this.b_grundrechner.Name = "b_grundrechner";
-            this.b_grundrechner.Size = new System.Drawing.Size(121, 50);
-            this.b_grundrechner.TabIndex = 35;
-            this.b_grundrechner.Text = "Grundrechner öffnen";
-            this.b_grundrechner.UseVisualStyleBackColor = true;
+            this.b_calc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.b_calc.Location = new System.Drawing.Point(191, 117);
+            this.b_calc.Name = "b_calc";
+            this.b_calc.Size = new System.Drawing.Size(106, 50);
+            this.b_calc.TabIndex = 35;
+            this.b_calc.Text = "Nebenrechner öffnen";
+            this.b_calc.UseVisualStyleBackColor = true;
+            // 
+            // btn_close
+            // 
+            this.btn_close.Location = new System.Drawing.Point(191, 229);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(106, 49);
+            this.btn_close.TabIndex = 36;
+            this.btn_close.Text = "Schließen";
+            this.btn_close.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(246, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 49);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "⌫";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(191, 61);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 49);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "C";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Eingabemodul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 331);
-            this.Controls.Add(this.b_grundrechner);
+            this.ClientSize = new System.Drawing.Size(308, 292);
+            this.ControlBox = false;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_close);
+            this.Controls.Add(this.b_calc);
             this.Controls.Add(this.b_sign);
             this.Controls.Add(this.b_return);
             this.Controls.Add(this.b_comma);
@@ -248,6 +284,9 @@ namespace JustForYou_Taschenrechner
         private System.Windows.Forms.Button b_3;
         private System.Windows.Forms.Button b_return;
         private System.Windows.Forms.Button b_sign;
-        private System.Windows.Forms.Button b_grundrechner;
+        private System.Windows.Forms.Button b_calc;
+        private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

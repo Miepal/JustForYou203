@@ -106,6 +106,7 @@ namespace JustForYou_Taschenrechner
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 311);
+            this.ControlBox = false;
             this.Controls.Add(this.b_back);
             this.Controls.Add(this.b_netto_brutto);
             this.Controls.Add(this.b_brutto_netto);

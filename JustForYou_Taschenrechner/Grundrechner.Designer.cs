@@ -54,6 +54,7 @@ namespace JustForYou_Taschenrechner
             this.btn_close = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb_formula
@@ -298,12 +299,23 @@ namespace JustForYou_Taschenrechner
             this.button4.Text = "⌫";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(25, 381);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "⚙";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Grundrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(313, 445);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_close);
@@ -363,5 +375,6 @@ namespace JustForYou_Taschenrechner
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
     }
 }

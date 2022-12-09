@@ -33,33 +33,34 @@ namespace JustForYou_Taschenrechner
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.gb_font = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.gb_fontSize = new System.Windows.Forms.GroupBox();
+            this.b_size10pt = new System.Windows.Forms.Button();
+            this.b_size15pt = new System.Windows.Forms.Button();
+            this.b_size20pt = new System.Windows.Forms.Button();
+            this.gb_backgroundColor = new System.Windows.Forms.GroupBox();
+            this.b_lightMode = new System.Windows.Forms.Button();
+            this.b_grey = new System.Windows.Forms.Button();
+            this.b_darkMode = new System.Windows.Forms.Button();
+            this.b_close = new System.Windows.Forms.Button();
             this.gb_font.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gb_fontSize.SuspendLayout();
+            this.gb_backgroundColor.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(6, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(136, 51);
             this.button1.TabIndex = 0;
             this.button1.Text = "Segoe UI";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(87, 22);
+            this.button2.Location = new System.Drawing.Point(157, 22);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(136, 51);
             this.button2.TabIndex = 1;
             this.button2.Text = "Arial";
             this.button2.UseVisualStyleBackColor = true;
@@ -67,9 +68,9 @@ namespace JustForYou_Taschenrechner
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(168, 22);
+            this.button3.Location = new System.Drawing.Point(309, 22);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 23);
+            this.button3.Size = new System.Drawing.Size(136, 51);
             this.button3.TabIndex = 2;
             this.button3.Text = "Comic Sans MS";
             this.button3.UseVisualStyleBackColor = true;
@@ -81,102 +82,116 @@ namespace JustForYou_Taschenrechner
             this.gb_font.Controls.Add(this.button3);
             this.gb_font.Location = new System.Drawing.Point(24, 25);
             this.gb_font.Name = "gb_font";
-            this.gb_font.Size = new System.Drawing.Size(313, 100);
+            this.gb_font.Size = new System.Drawing.Size(454, 100);
             this.gb_font.TabIndex = 9;
             this.gb_font.TabStop = false;
             this.gb_font.Text = "Schriftart";
             // 
-            // groupBox1
+            // gb_fontSize
             // 
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.button11);
-            this.groupBox1.Controls.Add(this.button12);
-            this.groupBox1.Location = new System.Drawing.Point(24, 140);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 100);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Schriftart";
+            this.gb_fontSize.Controls.Add(this.b_size10pt);
+            this.gb_fontSize.Controls.Add(this.b_size15pt);
+            this.gb_fontSize.Controls.Add(this.b_size20pt);
+            this.gb_fontSize.Location = new System.Drawing.Point(24, 142);
+            this.gb_fontSize.Name = "gb_fontSize";
+            this.gb_fontSize.Size = new System.Drawing.Size(454, 100);
+            this.gb_fontSize.TabIndex = 10;
+            this.gb_fontSize.TabStop = false;
+            this.gb_fontSize.Text = "Schriftgröße";
             // 
-            // button10
+            // b_size10pt
             // 
-            this.button10.Location = new System.Drawing.Point(6, 22);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.b_size10pt.Location = new System.Drawing.Point(6, 22);
+            this.b_size10pt.Name = "b_size10pt";
+            this.b_size10pt.Size = new System.Drawing.Size(136, 51);
+            this.b_size10pt.TabIndex = 0;
+            this.b_size10pt.Text = "10pt";
+            this.b_size10pt.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // b_size15pt
             // 
-            this.button11.Location = new System.Drawing.Point(87, 22);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.b_size15pt.Location = new System.Drawing.Point(157, 22);
+            this.b_size15pt.Name = "b_size15pt";
+            this.b_size15pt.Size = new System.Drawing.Size(136, 51);
+            this.b_size15pt.TabIndex = 1;
+            this.b_size15pt.Text = "15pt";
+            this.b_size15pt.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // b_size20pt
             // 
-            this.button12.Location = new System.Drawing.Point(168, 22);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            this.b_size20pt.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.b_size20pt.Location = new System.Drawing.Point(309, 22);
+            this.b_size20pt.Name = "b_size20pt";
+            this.b_size20pt.Size = new System.Drawing.Size(136, 51);
+            this.b_size20pt.TabIndex = 2;
+            this.b_size20pt.Text = "20pt";
+            this.b_size20pt.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // gb_backgroundColor
             // 
-            this.groupBox2.Controls.Add(this.button13);
-            this.groupBox2.Controls.Add(this.button14);
-            this.groupBox2.Controls.Add(this.button15);
-            this.groupBox2.Location = new System.Drawing.Point(24, 258);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 100);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Schriftart";
+            this.gb_backgroundColor.Controls.Add(this.b_lightMode);
+            this.gb_backgroundColor.Controls.Add(this.b_grey);
+            this.gb_backgroundColor.Controls.Add(this.b_darkMode);
+            this.gb_backgroundColor.Location = new System.Drawing.Point(24, 259);
+            this.gb_backgroundColor.Name = "gb_backgroundColor";
+            this.gb_backgroundColor.Size = new System.Drawing.Size(454, 100);
+            this.gb_backgroundColor.TabIndex = 10;
+            this.gb_backgroundColor.TabStop = false;
+            this.gb_backgroundColor.Text = "Hintergrundfarbe";
             // 
-            // button13
+            // b_lightMode
             // 
-            this.button13.Location = new System.Drawing.Point(6, 22);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
+            this.b_lightMode.Location = new System.Drawing.Point(6, 22);
+            this.b_lightMode.Name = "b_lightMode";
+            this.b_lightMode.Size = new System.Drawing.Size(136, 51);
+            this.b_lightMode.TabIndex = 0;
+            this.b_lightMode.Text = "Hell";
+            this.b_lightMode.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // b_grey
             // 
-            this.button14.Location = new System.Drawing.Point(87, 22);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
+            this.b_grey.Location = new System.Drawing.Point(157, 22);
+            this.b_grey.Name = "b_grey";
+            this.b_grey.Size = new System.Drawing.Size(136, 51);
+            this.b_grey.TabIndex = 1;
+            this.b_grey.Text = "Grau";
+            this.b_grey.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // b_darkMode
             // 
-            this.button15.Location = new System.Drawing.Point(168, 22);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
+            this.b_darkMode.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.b_darkMode.Location = new System.Drawing.Point(309, 22);
+            this.b_darkMode.Name = "b_darkMode";
+            this.b_darkMode.Size = new System.Drawing.Size(136, 51);
+            this.b_darkMode.TabIndex = 2;
+            this.b_darkMode.Text = "Dunkel";
+            this.b_darkMode.UseVisualStyleBackColor = true;
+            // 
+            // b_close
+            // 
+            this.b_close.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.b_close.Location = new System.Drawing.Point(333, 381);
+            this.b_close.Name = "b_close";
+            this.b_close.Size = new System.Drawing.Size(136, 51);
+            this.b_close.TabIndex = 11;
+            this.b_close.Text = "Schließen";
+            this.b_close.UseVisualStyleBackColor = true;
             // 
             // Einstellungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(494, 455);
+            this.ControlBox = false;
+            this.Controls.Add(this.b_close);
+            this.Controls.Add(this.gb_fontSize);
+            this.Controls.Add(this.gb_backgroundColor);
             this.Controls.Add(this.gb_font);
             this.Name = "Einstellungen";
             this.Text = "Einstellungen";
             this.gb_font.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.gb_fontSize.ResumeLayout(false);
+            this.gb_backgroundColor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -187,13 +202,14 @@ namespace JustForYou_Taschenrechner
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox gb_font;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.GroupBox gb_fontSize;
+        private System.Windows.Forms.Button b_size10pt;
+        private System.Windows.Forms.Button b_size15pt;
+        private System.Windows.Forms.Button b_size20pt;
+        private System.Windows.Forms.GroupBox gb_backgroundColor;
+        private System.Windows.Forms.Button b_lightMode;
+        private System.Windows.Forms.Button b_grey;
+        private System.Windows.Forms.Button b_darkMode;
+        private System.Windows.Forms.Button b_close;
     }
 }

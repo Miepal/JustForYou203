@@ -17,5 +17,10 @@ namespace JustForYou_Taschenrechner
             InitializeComponent();
         }
 
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            Einstellungen einstellungen = new Einstellungen();
+            einstellungen.Show();
+        }
     }
 }

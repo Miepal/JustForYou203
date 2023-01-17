@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\bgyb\\.nuget\\packages\\": {},
+    "C:\\Users\\schmalzma\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
+      "projectUniqueName": "C:\\Users\\schmalzma\\Source\\Repos\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
       "projectName": "JustForYou_Taschenrechner",
-      "projectPath": "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
-      "packagesPath": "C:\\Users\\bgyb\\.nuget\\packages\\",
-      "outputPath": "C:\\tmp\\JustForYou\\JustForYou_Taschenrechner\\obj\\",
+      "projectPath": "C:\\Users\\schmalzma\\Source\\Repos\\JustForYou\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
+      "packagesPath": "C:\\Users\\schmalzma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\schmalzma\\Source\\Repos\\JustForYou\\JustForYou_Taschenrechner\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\bgyb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\schmalzma\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

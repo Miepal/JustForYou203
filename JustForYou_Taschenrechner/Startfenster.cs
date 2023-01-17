@@ -17,5 +17,10 @@ namespace JustForYou_Taschenrechner
             InitializeComponent();
         }
 
+        private void b_calc_Click(object sender, EventArgs e)
+        {
+            Grundrechner calc = new Grundrechner();
+            calc.Show();
+        }
     }
 }

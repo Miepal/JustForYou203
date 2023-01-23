@@ -282,7 +282,6 @@ namespace JustForYou_Taschenrechner
         #endregion
 
         private System.Windows.Forms.Label l_parameter;
-        private System.Windows.Forms.TextBox tb_input;
         private System.Windows.Forms.Button b_comma;
         private System.Windows.Forms.Button b_0;
         private System.Windows.Forms.Button b_7;
@@ -301,5 +300,6 @@ namespace JustForYou_Taschenrechner
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox tb_input;
     }
 }

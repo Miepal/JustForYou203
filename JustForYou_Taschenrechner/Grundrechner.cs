@@ -71,7 +71,7 @@ namespace JustForYou_Taschenrechner
 
         private void b_backspace_Click(object sender, EventArgs e)
         {
-            tb_formula.Text.Remove(tb_formula.Text.Length - 1);
+            tb_formula.Text = tb_formula.Text.Remove(tb_formula.Text.Length - 1);
         }
 
         private void b_4_Click(object sender, EventArgs e)
@@ -132,26 +132,52 @@ namespace JustForYou_Taschenrechner
         private void b_equal_Click(object sender, EventArgs e)
         {
             string formula = tb_formula.Text;
-            Regex regex = new Regex("\\(.*[^()].*\\)");
-            MatchCollection matches = regex.Matches(formula);
-            if(matches.Count != 0)
+            Regex numberBracketFront = new Regex("\\d\\(");
+            
+            Regex minusPattern = new Regex("([^\\d]-\\d)|(^-\\d)");
+            MatchCollection minusSigns = minusPattern.Matches(formula);
+            foreach(Match match in minusSigns)
             {
-                Regex checkBracket = new Regex("[\\(\\)]");
-                while (checkBracket.IsMatch(formula))
+                string[] workingString = new string[match.Value.Length];
+                for(int i = 0; i < match.Value.Length; i++)
+                {
+                    if(match.Value[i].ToString() == "-")
+                    {
+                        workingString[i] = "MINUS";
+                    }
+                    else
+                    {
+                        workingString[i] = match.Value[i].ToString();
+                    }
+                }
+                string minusReplacer = String.Join("", workingString);
+                Regex regex = new Regex(match.Value);
+                formula = regex.Replace(formula, minusReplacer);
+            }
+            Regex checkBracket = new Regex("[\\(\\)]");
+            while (checkBracket.IsMatch(formula)) 
+            { 
+                Regex regex = new Regex("\\(\\d*[^()]\\d*\\)");
+                MatchCollection matches = regex.Matches(formula);
+                if(matches.Count != 0)
                 {
                     foreach (Match match in matches)
                     {
-                        Regex patternBracket = new Regex(match.Value);
-                        patternBracket.Replace(formula, replace_PM(match.Value));
+                        string currentMatch = match.Value;
+                        Regex escapeSign = new Regex("[\\(\\)+*]");
+                        foreach(Match specialSign in escapeSign.Matches(currentMatch))
+                        {
+                            string escapedSign = "\\" + specialSign.Value;
+                            Regex oneSign = new Regex(escapedSign);
+                            currentMatch = oneSign.Replace(currentMatch, escapedSign);
+                        }
+                        Regex patternBracket = new Regex(currentMatch);
+                        formula = patternBracket.Replace(formula, replace_PM(match.Value));
                     }
                     matches = regex.Matches(formula);
                 }
-                tb_output.Text = formula;
             }
-            else
-            {
-                tb_output.Text = replace_PM(tb_formula.Text);
-            }
+            tb_output.Text = replace_PM(formula);
 
         }
 
@@ -167,37 +193,49 @@ namespace JustForYou_Taschenrechner
 
         private string replace_MD(Match text)
         {
-            Regex regex = new Regex("[0-9,/*]+");
-            string result = "";
+            Regex regex = new Regex("[\\d\\w,/*]+");
+            string result = text.Value;
             MatchCollection matches = regex.Matches(text.Value);
             if(matches.Count != 0)
             {
                 foreach (Match match in matches)
                 {
-                    Regex reg = new Regex("[0-9,]");
+                    Regex reg = new Regex("(MINUS)?[\\d,]+");
                     MatchCollection numbers = reg.Matches(match.Value);
                     List<double> values = new List<double>();
                     foreach (Match number in numbers)
                     {
-                        values.Add(Convert.ToDouble(number.Value));
+                        Regex signPattern = new Regex("MINUS");
+                        if (signPattern.IsMatch(number.Value))
+                        {
+                            string a = signPattern.Replace(number.Value, "-");
+                            values.Add(Convert.ToDouble(a));
+                        }
+                        else
+                        {
+                            values.Add(Convert.ToDouble(number.Value));
+                        }
                     }
                     Regex regexOperator = new Regex("[*/]");
                     MatchCollection matchOperator = regexOperator.Matches(match.Value);
+                    string newPattern = values[0].ToString();
                     foreach(Match o in matchOperator)
                     {
                         if(o.Value == "*")
                         {
+                            newPattern = newPattern + "\\*" + values[1];
                             values[0] *= values[1];
                             values.RemoveAt(1);
                         }
                         else
                         {
+                            newPattern = newPattern + "/" + values[1];
                             values[0] /= values[1];
                             values.RemoveAt(1);
                         }
                     }
-                    Regex calc = new Regex(match.Value);
-                    result = calc.Replace(text.Value, values[0].ToString());
+                    Regex calc = new Regex(newPattern);
+                    result = calc.Replace(result, values[0].ToString());
                 }
             }
             return result;
@@ -205,15 +243,24 @@ namespace JustForYou_Taschenrechner
 
         private string replace_PM(string text)
         {
-            Regex regex = new Regex("[0-9,*/+-]*");
+            Regex regex = new Regex("[\\w\\d,*/+-]+");
             Match match = regex.Match(text);
             string result = replace_MD(match);
-            Regex numbersPattern = new Regex("[0-9]+");
+            Regex numbersPattern = new Regex("(MINUS)?[\\d,]+");
             List<double> values = new List<double>();
             MatchCollection numbers = numbersPattern.Matches(result);
             foreach(Match number in numbers)
             {
-                values.Add(Convert.ToDouble(number.Value));
+                Regex signPattern = new Regex("MINUS");
+                if (signPattern.IsMatch(number.Value))
+                {
+                    string a = signPattern.Replace(number.Value, "-");
+                    values.Add(Convert.ToDouble(a));
+                }
+                else
+                {
+                    values.Add(Convert.ToDouble(number.Value));
+                }
             }
             Regex patternOperator = new Regex("[+-]");
             MatchCollection matchOperator = patternOperator.Matches(result);
@@ -221,6 +268,7 @@ namespace JustForYou_Taschenrechner
             {
                 if (o.Value == "+")
                 {
+
                     values[0] += values[1];
                     values.RemoveAt(1);
                 }

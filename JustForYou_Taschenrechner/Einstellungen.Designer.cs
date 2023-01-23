@@ -30,9 +30,9 @@ namespace JustForYou_Taschenrechner
         private void InitializeComponent()
         {
             this.btn_segoeUI = new System.Windows.Forms.Button();
-            this.btn_arial = new System.Windows.Forms.Button();
-            this.btn_comicSansMS = new System.Windows.Forms.Button();
             this.gb_font = new System.Windows.Forms.GroupBox();
+            this.btn_comicSansMS = new System.Windows.Forms.Button();
+            this.btn_arial = new System.Windows.Forms.Button();
             this.gb_fontSize = new System.Windows.Forms.GroupBox();
             this.btn_size10pt = new System.Windows.Forms.Button();
             this.btn_size15pt = new System.Windows.Forms.Button();
@@ -58,24 +58,21 @@ namespace JustForYou_Taschenrechner
             this.btn_segoeUI.UseVisualStyleBackColor = false;
             this.btn_segoeUI.Click += new System.EventHandler(this.btn_segoeUI_Click);
             // 
-            // btn_arial
+            // gb_font
             // 
-            this.btn_arial.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_arial.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btn_arial.Location = new System.Drawing.Point(157, 22);
-            this.btn_arial.Name = "btn_arial";
-            this.btn_arial.Size = new System.Drawing.Size(136, 51);
-            this.btn_arial.TabIndex = 1;
-            this.btn_arial.Text = "Arial";
-            this.btn_arial.UseVisualStyleBackColor = false;
-            this.btn_arial.Click += new System.EventHandler(this.btn_arial_Click);
+            this.gb_font.Controls.Add(this.btn_comicSansMS);
+            this.gb_font.Controls.Add(this.btn_arial);
+            this.gb_font.Controls.Add(this.btn_segoeUI);
+            this.gb_font.Location = new System.Drawing.Point(24, 25);
+            this.gb_font.Name = "gb_font";
+            this.gb_font.Size = new System.Drawing.Size(454, 100);
+            this.gb_font.TabIndex = 9;
+            this.gb_font.TabStop = false;
+            this.gb_font.Text = "Schriftart";
             // 
             // btn_comicSansMS
             // 
             this.btn_comicSansMS.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_comicSansMS.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_comicSansMS.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_comicSansMS.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_comicSansMS.Location = new System.Drawing.Point(309, 22);
             this.btn_comicSansMS.Name = "btn_comicSansMS";
             this.btn_comicSansMS.Size = new System.Drawing.Size(136, 51);
@@ -84,17 +81,16 @@ namespace JustForYou_Taschenrechner
             this.btn_comicSansMS.UseVisualStyleBackColor = false;
             this.btn_comicSansMS.Click += new System.EventHandler(this.btn_comicSansMS_Click);
             // 
-            // gb_font
+            // btn_arial
             // 
-            this.gb_font.Controls.Add(this.btn_segoeUI);
-            this.gb_font.Controls.Add(this.btn_arial);
-            this.gb_font.Controls.Add(this.btn_comicSansMS);
-            this.gb_font.Location = new System.Drawing.Point(24, 25);
-            this.gb_font.Name = "gb_font";
-            this.gb_font.Size = new System.Drawing.Size(454, 100);
-            this.gb_font.TabIndex = 9;
-            this.gb_font.TabStop = false;
-            this.gb_font.Text = "Schriftart";
+            this.btn_arial.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_arial.Location = new System.Drawing.Point(157, 22);
+            this.btn_arial.Name = "btn_arial";
+            this.btn_arial.Size = new System.Drawing.Size(136, 51);
+            this.btn_arial.TabIndex = 1;
+            this.btn_arial.Text = "Arial";
+            this.btn_arial.UseVisualStyleBackColor = false;
+            this.btn_arial.Click += new System.EventHandler(this.btn_arial_Click);
             // 
             // gb_fontSize
             // 
@@ -211,6 +207,7 @@ namespace JustForYou_Taschenrechner
             this.Controls.Add(this.gb_fontSize);
             this.Controls.Add(this.gb_backgroundColor);
             this.Controls.Add(this.gb_font);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Einstellungen";
             this.Text = "Einstellungen";
             this.gb_font.ResumeLayout(false);
@@ -223,8 +220,6 @@ namespace JustForYou_Taschenrechner
         #endregion
 
         private System.Windows.Forms.Button btn_segoeUI;
-        private System.Windows.Forms.Button btn_arial;
-        private System.Windows.Forms.Button btn_comicSansMS;
         private System.Windows.Forms.GroupBox gb_font;
         private System.Windows.Forms.GroupBox gb_fontSize;
         private System.Windows.Forms.Button btn_size10pt;
@@ -235,5 +230,7 @@ namespace JustForYou_Taschenrechner
         private System.Windows.Forms.Button btn_contrastMode;
         private System.Windows.Forms.Button btn_darkMode;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_comicSansMS;
+        private System.Windows.Forms.Button btn_arial;
     }
 }

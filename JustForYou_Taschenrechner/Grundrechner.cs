@@ -131,6 +131,7 @@ namespace JustForYou_Taschenrechner
 
         private void b_equal_Click(object sender, EventArgs e)
         {
+            check_forbidden_symbols();
             string formula = tb_formula.Text;
             Regex numberBracketFront = new Regex("\\d\\(");
             
@@ -279,6 +280,36 @@ namespace JustForYou_Taschenrechner
                 }
             }
             return values[0].ToString();
+        }
+
+        private void tb_formula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(tb_formula.Text.Length >= 2)
+            {
+                if (tb_formula.Text[tb_formula.Text.Length - 1] == '(' && Char.IsDigit(tb_formula.Text[tb_formula.Text.Length - 2]))
+                {
+                    tb_formula.Text = tb_formula.Text.Remove(tb_formula.Text.Length - 1);
+                    tb_formula.Text += "*(";
+                }
+                else if (tb_formula.Text[tb_formula.Text.Length - 2] == ')' && (Char.IsDigit(tb_formula.Text[tb_formula.Text.Length - 1]) || tb_formula.Text[tb_formula.Text.Length - 1] == '('))
+                {
+                    string num = tb_formula.Text[tb_formula.Text.Length - 1].ToString();
+                    tb_formula.Text = tb_formula.Text.Remove(tb_formula.Text.Length - 1);
+                    tb_formula.Text += ("*" + num);
+                }
+                tb_formula.Select(tb_formula.Text.Length, 0);
+            }
+        }
+
+        private void check_forbidden_symbols()
+        {
+            Regex regex = new Regex("\\*\\*|\\*/|\\*\\+|/\\*|/\\+|\\+/|-/|\\+\\*|-\\*|\\d\\s\\d|,\\d*,");
+            if (regex.IsMatch(tb_formula.Text))
+            {
+                MessageBox.Show("Fehlerhafte Eingabe!");
+                tb_formula.Clear();
+                return;
+            }
         }
     }
 }

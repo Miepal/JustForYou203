@@ -63,6 +63,7 @@ namespace JustForYou_Taschenrechner
             this.tb_formula.Name = "tb_formula";
             this.tb_formula.Size = new System.Drawing.Size(273, 23);
             this.tb_formula.TabIndex = 0;
+            this.tb_formula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_formula_KeyPress);
             // 
             // b_plus
             // 

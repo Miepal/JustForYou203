@@ -133,6 +133,7 @@ namespace JustForYou_Taschenrechner
             this.b_percent.TabIndex = 0;
             this.b_percent.Text = "Prozentrechnung";
             this.b_percent.UseVisualStyleBackColor = true;
+            this.b_percent.Click += new System.EventHandler(this.b_percent_Click);
             // 
             // b_close
             // 
@@ -143,6 +144,7 @@ namespace JustForYou_Taschenrechner
             this.b_close.TabIndex = 10;
             this.b_close.Text = "✖";
             this.b_close.UseVisualStyleBackColor = true;
+            this.b_close.Click += new System.EventHandler(this.b_close_Click);
             // 
             // b_export
             // 

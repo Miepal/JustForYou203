@@ -11,14 +11,23 @@ namespace JustForYou_Taschenrechner
 {
     public partial class Eingabemodul : Form
     {
-        public Eingabemodul()
+        public Eingabemodul(List<String> moduleInput)
         {
             InitializeComponent();
+            variables = moduleInput;
         }
         private Font fontSettings = new Font("Sergoe UI", 10);
         private (Color, Color, Color) mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
+        private List<double> results;
+        private List<String> variables;
 
         Einstellungen einstellungen = new Einstellungen();
+
+        public List<double> getResult()
+        {
+            return this.results;
+        }
+
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
@@ -30,7 +39,7 @@ namespace JustForYou_Taschenrechner
 
         private void btn_backspace_Click(object sender, EventArgs e)
         {
-
+            tb_input.Text = tb_input.Text.Substring(0, tb_input.Text.Length - 1);
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
@@ -40,12 +49,20 @@ namespace JustForYou_Taschenrechner
 
         private void btn_calc_Click(object sender, EventArgs e)
         {
-
+            Grundrechner basecalc = new Grundrechner();
+            basecalc.ShowDialog();
         }
 
         private void btn_returnAsParameter_Click(object sender, EventArgs e)
         {
-
+            if (variables.Count > results.Count)
+            {
+                this.results.Add(Convert.ToDouble(tb_input.Text));
+            }
+            if(variables.Count == results.Count)
+            {
+                this.Close();
+            }
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -78,13 +95,8 @@ namespace JustForYou_Taschenrechner
             }
             else
             {
-
-            }
-            
-            
-            
-            
-            
+                //wrong input / no input
+            } 
         }
 
         private void btn_0_Click(object sender, EventArgs e)

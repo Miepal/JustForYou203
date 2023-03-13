@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prozentrechnung
 {
-    public class Prozentrechnung
+    public class modulProzentrechnung
     {
         //ProzentDazu
         public double percentAdd(double baseValue, double percentage)

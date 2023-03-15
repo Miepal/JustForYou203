@@ -31,6 +31,12 @@ namespace JustForYou_Taschenrechner
         private void b_percent_Click(object sender, EventArgs e)
         {
             FensterProzentrechnung prc = new FensterProzentrechnung();
+            prc.ShowDialog();
+            List<string> prcResults = prc.getResult();
+            foreach(string element in prcResults)
+            {
+                rTB_History.AppendText(element+"\n");
+            }
         }
     }
 }

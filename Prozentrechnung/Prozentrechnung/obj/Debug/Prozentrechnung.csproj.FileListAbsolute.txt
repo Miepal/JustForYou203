@@ -1,0 +1,6 @@
+C:\tmp\JustForYou203\Prozentrechnung\Prozentrechnung\bin\Debug\Prozentrechnung.dll
+C:\tmp\JustForYou203\Prozentrechnung\Prozentrechnung\bin\Debug\Prozentrechnung.pdb
+C:\tmp\JustForYou203\Prozentrechnung\Prozentrechnung\obj\Debug\Prozentrechnung.csproj.AssemblyReference.cache
+C:\tmp\JustForYou203\Prozentrechnung\Prozentrechnung\obj\Debug\Prozentrechnung.csproj.CoreCompileInputs.cache
+C:\tmp\JustForYou203\Prozentrechnung\Prozentrechnung\obj\Debug\Prozentrechnung.dll
+C:\tmp\JustForYou203\Prozentrechnung\Prozentrechnung\obj\Debug\Prozentrechnung.pdb

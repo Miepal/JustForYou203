@@ -15,15 +15,22 @@ namespace JustForYou_Taschenrechner
         {
             InitializeComponent();
             variables = moduleInput;
+            foreach (string element in moduleInput)
+            {
+                results.Add(element);
+            }
+
+            l_parameter.Text = moduleInput[i];
         }
         private Font fontSettings = new Font("Sergoe UI", 10);
         private (Color, Color, Color) mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
-        private List<double> results;
+        private List<string> results= new List<string>{ };
         private List<String> variables;
+        int i = 0;
 
         Einstellungen einstellungen = new Einstellungen();
 
-        public List<double> getResult()
+        public List<string> getResult()
         {
             return this.results;
         }
@@ -51,17 +58,29 @@ namespace JustForYou_Taschenrechner
         {
             Grundrechner basecalc = new Grundrechner();
             basecalc.ShowDialog();
+            List<string> baseCalcResults = basecalc.getResult();
+            tb_input.Text = baseCalcResults[0];
+            baseCalcResults.RemoveAt(0);
+            foreach (string element  in baseCalcResults)
+            {
+                results.Add(element);
+            }
+
+
         }
 
         private void btn_returnAsParameter_Click(object sender, EventArgs e)
         {
-            if (variables.Count > results.Count)
-            {
-                this.results.Add(Convert.ToDouble(tb_input.Text));
-            }
-            if(variables.Count == results.Count)
+            int variablesCount = variables.Count - 1;
+            this.results[i] = tb_input.Text;
+            if (variables[variablesCount] != results[variablesCount])
             {
                 this.Close();
+            }
+            else
+            {
+                i += 1;
+                l_parameter.Text = variables[i];
             }
         }
 

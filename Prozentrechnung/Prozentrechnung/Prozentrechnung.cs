@@ -26,7 +26,7 @@ namespace Prozentrechnung
         //ProzentSatz
         public double percentage(double percentageValue, double baseValue)
         {
-            return percentageValue/baseValue;
+            return percentageValue / baseValue;
         }
         //BruttoAusNetto
         public double bruttoFromNetto(double bruttoValue, bool groceries)

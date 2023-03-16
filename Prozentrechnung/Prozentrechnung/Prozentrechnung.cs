@@ -8,28 +8,31 @@ namespace Prozentrechnung
 {
     public class modulProzentrechnung
     {
+        List<string> results = new List<string> { };
         //ProzentDazu
-        public double percentAdd(double baseValue, double percentage)
+        public List<string> percentAdd(double baseValue, double percentage)
         {
+            results.Add(Convert.ToString(baseValue + (baseValue * percentage / 100)));
+            results.Add("baseValue  + (baseValue * percentage / 100)",.format());
             return baseValue + (baseValue * percentage / 100);
         }
         //ProzentWeg
-        public double percentSub(double baseValue, double percentage)
+        public List<string> percentSub(double baseValue, double percentage)
         {
             return baseValue - (baseValue * percentage / 100);
         }
         //ProzentDavon
-        public double percentFrom(double baseValue, double percentage)
+        public List<string> percentFrom(double baseValue, double percentage)
         {
             return baseValue * (percentage / 100);
         }
         //ProzentSatz
-        public double percentage(double percentageValue, double baseValue)
+        public List<string> percentage(double percentageValue, double baseValue)
         {
             return percentageValue / baseValue;
         }
         //BruttoAusNetto
-        public double bruttoFromNetto(double bruttoValue, bool groceries)
+        public List<string> bruttoFromNetto(double bruttoValue, bool groceries)
         {
             if (groceries)
             {
@@ -41,7 +44,7 @@ namespace Prozentrechnung
             }
         }
         //NettoAusBrutto
-        public double nettoFromBrutto(double bruttoValue, bool groceries)
+        public List<string> nettoFromBrutto(double bruttoValue, bool groceries)
         {
             if (groceries)
             {

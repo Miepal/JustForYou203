@@ -17,7 +17,7 @@ namespace JustForYou_Taschenrechner
         }
         modulProzentrechnung prcModule = new modulProzentrechnung();
 
-        private List<string> result = new List<string> { };
+        private List<string> result = new List<string> {"0"};
         
         public List<string> getResult()
         {
@@ -29,8 +29,10 @@ namespace JustForYou_Taschenrechner
             Eingabemodul insertModule = new Eingabemodul(neededVariables);
             insertModule.ShowDialog();
             List<string> resultsInsertModule = insertModule.getResult();
-            if (resultsInsertModule.Count == 2) { 
+            if (resultsInsertModule.Count >= 2) { 
                 this.result[0] = Convert.ToString(prcModule.percentAdd(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1])));
+                resultsInsertModule.RemoveAt(0);
+                resultsInsertModule.RemoveAt(0);
                 foreach(string element in resultsInsertModule)
                 {
                     this.result.Add(element);

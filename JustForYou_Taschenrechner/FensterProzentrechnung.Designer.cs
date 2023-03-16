@@ -1,7 +1,7 @@
 ﻿
 namespace JustForYou_Taschenrechner
 {
-    partial class Prozentrechnung
+    partial class FensterProzentrechnung
     {
         /// <summary>
         /// Required designer variable.
@@ -47,6 +47,7 @@ namespace JustForYou_Taschenrechner
             this.b_add_percent.TabIndex = 2;
             this.b_add_percent.Text = "% dazu";
             this.b_add_percent.UseVisualStyleBackColor = true;
+            this.b_add_percent.Click += new System.EventHandler(this.b_add_percent_Click);
             // 
             // b_sub_percent
             // 

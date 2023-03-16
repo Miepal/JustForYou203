@@ -29,7 +29,7 @@ namespace JustForYou_Taschenrechner
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rTB_History = new System.Windows.Forms.RichTextBox();
             this.l_history = new System.Windows.Forms.Label();
             this.gb_branch = new System.Windows.Forms.GroupBox();
             this.b_IT = new System.Windows.Forms.Button();
@@ -46,13 +46,13 @@ namespace JustForYou_Taschenrechner
             this.gb_branch.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // rTB_History
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(13, 42);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(258, 551);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rTB_History.Location = new System.Drawing.Point(13, 42);
+            this.rTB_History.Name = "rTB_History";
+            this.rTB_History.Size = new System.Drawing.Size(258, 551);
+            this.rTB_History.TabIndex = 0;
+            this.rTB_History.Text = "";
             // 
             // l_history
             // 
@@ -133,6 +133,7 @@ namespace JustForYou_Taschenrechner
             this.b_percent.TabIndex = 0;
             this.b_percent.Text = "Prozentrechnung";
             this.b_percent.UseVisualStyleBackColor = true;
+            this.b_percent.Click += new System.EventHandler(this.b_percent_Click);
             // 
             // b_close
             // 
@@ -143,6 +144,7 @@ namespace JustForYou_Taschenrechner
             this.b_close.TabIndex = 10;
             this.b_close.Text = "✖";
             this.b_close.UseVisualStyleBackColor = true;
+            this.b_close.Click += new System.EventHandler(this.b_close_Click);
             // 
             // b_export
             // 
@@ -195,7 +197,7 @@ namespace JustForYou_Taschenrechner
             this.Controls.Add(this.b_close);
             this.Controls.Add(this.gb_branch);
             this.Controls.Add(this.l_history);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rTB_History);
             this.Name = "Startfenster";
             this.Text = "Startfenster";
             this.gb_branch.ResumeLayout(false);
@@ -206,7 +208,7 @@ namespace JustForYou_Taschenrechner
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rTB_History;
         private System.Windows.Forms.Label l_history;
         private System.Windows.Forms.GroupBox gb_branch;
         private System.Windows.Forms.Button b_close;

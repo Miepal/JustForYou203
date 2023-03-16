@@ -11,21 +11,26 @@ namespace JustForYou_Taschenrechner
 {
     public partial class Grundrechner : Form
     {
-        private float result;
+        private List<string> result = new List<string> {"0"};
 
         public Grundrechner()
         {
             InitializeComponent();
         }
 
-        public float getResult()
+        public List<string> getResult()
         {
             return result;
         }
 
-        public void setResult(float data)
+        public void setResult(string data)
         {
-            result = data;
+            result[0] = data;
+        }
+
+        public void addFormula(string formula) 
+        {
+            result.Add(formula);
         }
 
         private void b_divide_Click(object sender, EventArgs e)
@@ -178,8 +183,10 @@ namespace JustForYou_Taschenrechner
                     matches = regex.Matches(formula);
                 }
             }
-            tb_output.Text = replace_PM(formula);
-
+            string tmpResult = replace_PM(formula);
+            tb_output.Text = tmpResult;
+            setResult(tmpResult);
+            addFormula(tb_formula.Text + " = " + tmpResult);
         }
 
         private void b_settings_Click(object sender, EventArgs e)

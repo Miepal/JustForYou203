@@ -29,8 +29,13 @@ namespace JustForYou_Taschenrechner
             Eingabemodul insertModule = new Eingabemodul(neededVariables);
             insertModule.ShowDialog();
             List<string> resultsInsertModule = insertModule.getResult();
-            if (resultsInsertModule.Count >= 2) { 
-                this.result[0] = Convert.ToString(prcModule.percentAdd(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1])));
+            if (resultsInsertModule.Count >= neededVariables.Count) {
+                List<string> prcModuleResults = prcModule.percentAdd(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1]))
+                this.result[0] = Convert.ToString(prcModuleResults[0]);
+                foreach (string element in prcModuleResults)
+                {
+                    this.result.Add(element);
+                }
                 resultsInsertModule.RemoveAt(0);
                 resultsInsertModule.RemoveAt(0);
                 foreach(string element in resultsInsertModule)

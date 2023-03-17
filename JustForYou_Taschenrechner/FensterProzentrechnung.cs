@@ -29,19 +29,120 @@ namespace JustForYou_Taschenrechner
             Eingabemodul insertModule = new Eingabemodul(neededVariables);
             insertModule.ShowDialog();
             List<string> resultsInsertModule = insertModule.getResult();
-            if (resultsInsertModule.Count >= neededVariables.Count) {
-                List<string> prcModuleResults = prcModule.percentAdd(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1]))
-                this.result[0] = Convert.ToString(prcModuleResults[0]);
-                foreach (string element in prcModuleResults)
+            if (resultsInsertModule.Count >= neededVariables.Count)
+            {
+                string prcModuleResults = prcModule.percentAdd(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1]));
+                this.result[0] = Convert.ToString(prcModuleResults);
+                for (int i = 0; i < neededVariables.Count; ++i)
                 {
-                    this.result.Add(element);
+                    resultsInsertModule.RemoveAt(0);
                 }
-                resultsInsertModule.RemoveAt(0);
-                resultsInsertModule.RemoveAt(0);
-                foreach(string element in resultsInsertModule)
+                this.result.AddRange(resultsInsertModule);
+            }
+            this.Close();
+        }
+
+        private void b_of_percent_Click(object sender, EventArgs e)
+        {
+            List<string> neededVariables = new List<string> { "Basiswert", "Prozentwert" };
+            Eingabemodul insertModule = new Eingabemodul(neededVariables);
+            insertModule.ShowDialog();
+            List<string> resultsInsertModule = insertModule.getResult();
+            if (resultsInsertModule.Count >= neededVariables.Count)
+            {
+                string prcModuleResults = prcModule.percentFrom(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1]));
+                this.result[0] = Convert.ToString(prcModuleResults);
+                for (int i = 0; i < neededVariables.Count; ++i)
                 {
-                    this.result.Add(element);
+                    resultsInsertModule.RemoveAt(0);
                 }
+                this.result.AddRange(resultsInsertModule);
+            }
+            this.Close();
+        }
+
+        private void b_part_percent_Click(object sender, EventArgs e)
+        {
+            List<string> neededVariables = new List<string> { "Prozentsatz", "Basiswert" };
+            Eingabemodul insertModule = new Eingabemodul(neededVariables);
+            insertModule.ShowDialog();
+            List<string> resultsInsertModule = insertModule.getResult();
+            if (resultsInsertModule.Count >= neededVariables.Count)
+            {
+                string prcModuleResults = prcModule.percentage(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1]));
+                this.result[0] = Convert.ToString(prcModuleResults);
+                for (int i = 0; i < neededVariables.Count; ++i)
+                {
+                    resultsInsertModule.RemoveAt(0);
+                }
+                this.result.AddRange(resultsInsertModule);
+            }
+            this.Close();
+        }
+
+        private void b_sub_percent_Click(object sender, EventArgs e)
+        {
+            List<string> neededVariables = new List<string> { "Basiswert", "Prozentwert" };
+            Eingabemodul insertModule = new Eingabemodul(neededVariables);
+            insertModule.ShowDialog();
+            List<string> resultsInsertModule = insertModule.getResult();
+            if (resultsInsertModule.Count >= neededVariables.Count)
+            {
+                string prcModuleResults = prcModule.percentSub(Convert.ToDouble(resultsInsertModule[0]), Convert.ToDouble(resultsInsertModule[1]));
+                this.result[0] = Convert.ToString(prcModuleResults);
+                for (int i = 0; i < neededVariables.Count; ++i)
+                {
+                    resultsInsertModule.RemoveAt(0);
+                }
+                this.result.AddRange(resultsInsertModule);
+            }
+            this.Close();
+        }
+
+        private void b_brutto_netto_Click(object sender, EventArgs e)
+        {
+            List<string> neededVariables = new List<string> { "Bruttowert", "Lebensmittel? 1 = Ja" };
+            Eingabemodul insertModule = new Eingabemodul(neededVariables);
+            insertModule.ShowDialog();
+            List<string> resultsInsertModule = insertModule.getResult();
+            if (resultsInsertModule.Count >= neededVariables.Count)
+            {
+                bool isGroceries = false;
+                if (resultsInsertModule[1] == "1")
+                {
+                    isGroceries = true;
+                }
+                string prcModuleResults = prcModule.bruttoFromNetto(Convert.ToDouble(resultsInsertModule[0]), isGroceries);
+                this.result[0] = Convert.ToString(prcModuleResults);
+                for (int i = 0; i < neededVariables.Count; ++i)
+                {
+                    resultsInsertModule.RemoveAt(0);
+                }
+                this.result.AddRange(resultsInsertModule);
+            }
+            this.Close();
+        }
+
+        private void b_netto_brutto_Click(object sender, EventArgs e)
+        {
+            List<string> neededVariables = new List<string> { "Nettowert", "Lebensmittel? 1 = Ja" };
+            Eingabemodul insertModule = new Eingabemodul(neededVariables);
+            insertModule.ShowDialog();
+            List<string> resultsInsertModule = insertModule.getResult();
+            if (resultsInsertModule.Count >= neededVariables.Count)
+            {
+                bool isGroceries = false;
+                if (resultsInsertModule[1] == "1")
+                {
+                    isGroceries = true;
+                }
+                string prcModuleResults = prcModule.nettoFromBrutto(Convert.ToDouble(resultsInsertModule[0]), isGroceries);
+                this.result[0] = Convert.ToString(prcModuleResults);
+                for (int i = 0; i < neededVariables.Count; ++i)
+                {
+                    resultsInsertModule.RemoveAt(0);
+                }
+                this.result.AddRange(resultsInsertModule);
             }
             this.Close();
         }

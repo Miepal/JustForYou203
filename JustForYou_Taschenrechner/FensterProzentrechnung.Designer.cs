@@ -57,6 +57,7 @@ namespace JustForYou_Taschenrechner
             this.b_sub_percent.TabIndex = 3;
             this.b_sub_percent.Text = "% weg";
             this.b_sub_percent.UseVisualStyleBackColor = true;
+            this.b_sub_percent.Click += new System.EventHandler(this.b_sub_percent_Click);
             // 
             // b_of_percent
             // 
@@ -66,6 +67,7 @@ namespace JustForYou_Taschenrechner
             this.b_of_percent.TabIndex = 4;
             this.b_of_percent.Text = "% davon";
             this.b_of_percent.UseVisualStyleBackColor = true;
+            this.b_of_percent.Click += new System.EventHandler(this.b_of_percent_Click);
             // 
             // b_part_percent
             // 
@@ -75,6 +77,7 @@ namespace JustForYou_Taschenrechner
             this.b_part_percent.TabIndex = 5;
             this.b_part_percent.Text = "% Satz";
             this.b_part_percent.UseVisualStyleBackColor = true;
+            this.b_part_percent.Click += new System.EventHandler(this.b_part_percent_Click);
             // 
             // b_brutto_netto
             // 
@@ -84,6 +87,7 @@ namespace JustForYou_Taschenrechner
             this.b_brutto_netto.TabIndex = 6;
             this.b_brutto_netto.Text = "Bruttopreis aus Nettopreis";
             this.b_brutto_netto.UseVisualStyleBackColor = true;
+            this.b_brutto_netto.Click += new System.EventHandler(this.b_brutto_netto_Click);
             // 
             // b_netto_brutto
             // 
@@ -93,6 +97,7 @@ namespace JustForYou_Taschenrechner
             this.b_netto_brutto.TabIndex = 7;
             this.b_netto_brutto.Text = "Nettopreis aus Bruttopreis";
             this.b_netto_brutto.UseVisualStyleBackColor = true;
+            this.b_netto_brutto.Click += new System.EventHandler(this.b_netto_brutto_Click);
             // 
             // b_back
             // 
@@ -113,7 +118,7 @@ namespace JustForYou_Taschenrechner
             this.button1.Text = "⚙";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Prozentrechnung
+            // FensterProzentrechnung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +132,7 @@ namespace JustForYou_Taschenrechner
             this.Controls.Add(this.b_of_percent);
             this.Controls.Add(this.b_sub_percent);
             this.Controls.Add(this.b_add_percent);
-            this.Name = "Prozentrechnung";
+            this.Name = "FensterProzentrechnung";
             this.Text = "Prozentrechnungsmodul";
             this.ResumeLayout(false);
 

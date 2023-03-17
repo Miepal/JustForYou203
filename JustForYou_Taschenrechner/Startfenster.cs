@@ -38,5 +38,16 @@ namespace JustForYou_Taschenrechner
                 rTB_History.AppendText(element+"\n");
             }
         }
+
+        private void b_credit_Click(object sender, EventArgs e)
+        {
+            FensterKreditmodul crd = new FensterKreditmodul();
+            crd.ShowDialog();
+            List<string> crdResult = crd.getResult();
+            foreach (string elem in crdResult)
+            {
+                rTB_History.AppendText(elem + "\n");
+            }
+        }
     }
 }

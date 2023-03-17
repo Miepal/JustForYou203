@@ -22,26 +22,34 @@ namespace JustForYou_Taschenrechner
 
             l_parameter.Text = moduleInput[i];
         }
+        // settings color, Font and more
         private Font fontSettings = new Font("Sergoe UI", 10);
         private (Color, Color, Color) mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
-        private List<string> results= new List<string>{ };
-        private List<String> variables;
-        int i = 0;
-
-        Einstellungen einstellungen = new Einstellungen();
-
-        public List<string> getResult()
-        {
-            return this.results;
-        }
-
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
+            Einstellungen einstellungen = new Einstellungen();
             einstellungen.ShowDialog();
             this.fontSettings = einstellungen.getFont();
             this.mode = einstellungen.getMode();
             changeFont();
+            einstellungen = null;
+        }
+
+        ///////////////
+        // variables //
+        ///////////////
+
+
+
+
+        private List<string> results= new List<string>{ };
+        private List<String> variables;
+        int i = 0;
+
+        public List<string> getResult()
+        {
+            return this.results;
         }
 
         private void btn_backspace_Click(object sender, EventArgs e)

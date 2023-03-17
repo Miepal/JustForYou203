@@ -42,7 +42,7 @@ namespace JustForYou_Taschenrechner
             this.b_export = new System.Windows.Forms.Button();
             this.b_import = new System.Windows.Forms.Button();
             this.b_calc = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_settings = new System.Windows.Forms.Button();
             this.gb_branch.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,15 +174,16 @@ namespace JustForYou_Taschenrechner
             this.b_calc.UseVisualStyleBackColor = true;
             this.b_calc.Click += new System.EventHandler(this.b_calc_Click);
             // 
-            // button1
+            // btn_settings
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(340, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "⚙";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_settings.Location = new System.Drawing.Point(340, 12);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(40, 40);
+            this.btn_settings.TabIndex = 13;
+            this.btn_settings.Text = "⚙";
+            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // Startfenster
             // 
@@ -190,7 +191,7 @@ namespace JustForYou_Taschenrechner
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 601);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.b_calc);
             this.Controls.Add(this.b_import);
             this.Controls.Add(this.b_export);
@@ -221,7 +222,7 @@ namespace JustForYou_Taschenrechner
         private System.Windows.Forms.Button b_credit;
         private System.Windows.Forms.Button b_percent;
         private System.Windows.Forms.Button b_calc;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_settings;
     }
 }
 

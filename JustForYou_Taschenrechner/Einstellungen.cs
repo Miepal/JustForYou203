@@ -10,19 +10,21 @@ namespace JustForYou_Taschenrechner
 {
     public partial class Einstellungen : Form
     {
-        public Einstellungen()
+        public Einstellungen(Font userFontSettigns, (Color, Color, Color) mode)
         {
             InitializeComponent();
+            this.fontSettigns = userFontSettigns;
+            this.mode = mode;
         }
 
         // private variables
-        private Font fontsettings = new Font("Sergoe UI", 10);
-        private (Color, Color, Color) mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
+        private Font fontSettigns;
+        private (Color, Color, Color) mode;
 
         // get methods
         public Font getFont()
         {
-            return this.fontsettings;
+            return this.fontSettigns;
         }
         public (Color, Color, Color) getMode()
         {
@@ -32,38 +34,38 @@ namespace JustForYou_Taschenrechner
         // Button Click Events
         private void btn_segoeUI_Click(object sender, EventArgs e)
         {
-            this.fontsettings = new Font(new FontFamily("Segoe UI"), fontsettings.Size);
-            setFontSettings();
+            this.fontSettigns = new Font(new FontFamily("Segoe UI"), fontSettigns.Size);
+            setfontSettigns();
         }
 
         private void btn_arial_Click(object sender, EventArgs e)
         {
-            this.fontsettings = new Font(new FontFamily("Arial"), fontsettings.Size);
-            setFontSettings();
+            this.fontSettigns = new Font(new FontFamily("Arial"), fontSettigns.Size);
+            setfontSettigns();
         }
 
         private void btn_comicSansMS_Click(object sender, EventArgs e)
         {
-            this.fontsettings = new Font(new FontFamily("Comic Sans MS"), fontsettings.Size);
-            setFontSettings();
+            this.fontSettigns = new Font(new FontFamily("Comic Sans MS"), fontSettigns.Size);
+            setfontSettigns();
         }
 
         private void btn_size10pt_Click(object sender, EventArgs e)
         {
-            this.fontsettings = new Font(fontsettings.FontFamily, 10);
-            setFontSettings();
+            this.fontSettigns = new Font(fontSettigns.FontFamily, 10);
+            setfontSettigns();
         }
 
         private void btn_size15pt_Click(object sender, EventArgs e)
         {
-            this.fontsettings = new Font(fontsettings.FontFamily, 15);
-            setFontSettings();
+            this.fontSettigns = new Font(fontSettigns.FontFamily, 15);
+            setfontSettigns();
         }
 
         private void btn_size20pt_Click(object sender, EventArgs e)
         {
-            this.fontsettings = new Font(fontsettings.FontFamily, 20);
-            setFontSettings();
+            this.fontSettigns = new Font(fontSettigns.FontFamily, 20);
+            setfontSettigns();
         }
 
 
@@ -73,21 +75,21 @@ namespace JustForYou_Taschenrechner
         private void btn_lightMode_Click(object sender, EventArgs e)
         {
             this.mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
-            setFontSettings();
+            setfontSettigns();
         }
         private void btn_contrastMode_Click(object sender, EventArgs e)
         {
             this.mode = (Color.FromName("ActiveCaptionText"), Color.FromName("ActiveCaptionText"), Color.FromName("ControlLightLight"));
-            setFontSettings();
+            setfontSettigns();
         }
 
         private void btn_darkMode_Click(object sender, EventArgs e)
         {
             this.mode = (Color.FromName("WindowFrame"), Color.FromName("WindowFrame"), Color.FromName("ControlLightLight"));
-            setFontSettings();
+            setfontSettigns();
         }
 
-        private void setFontSettings() 
+        private void setfontSettigns() 
         {
             this.ForeColor = mode.Item3;
             this.BackColor = mode.Item2;
@@ -102,16 +104,16 @@ namespace JustForYou_Taschenrechner
             btn_size15pt.ForeColor = mode.Item1;
             btn_size20pt.ForeColor = mode.Item1;
 
-            btn_arial.Font = fontsettings;
-            btn_close.Font = fontsettings;
-            btn_comicSansMS.Font = fontsettings;
-            btn_contrastMode.Font = fontsettings;
-            btn_darkMode.Font = fontsettings;
-            btn_lightMode.Font = fontsettings;
-            btn_segoeUI.Font = fontsettings;
-            btn_size10pt.Font = fontsettings;
-            btn_size15pt.Font = fontsettings;
-            btn_size20pt.Font = fontsettings;
+            btn_arial.Font = fontSettigns;
+            btn_close.Font = fontSettigns;
+            btn_comicSansMS.Font = fontSettigns;
+            btn_contrastMode.Font = fontSettigns;
+            btn_darkMode.Font = fontSettigns;
+            btn_lightMode.Font = fontSettigns;
+            btn_segoeUI.Font = fontSettigns;
+            btn_size10pt.Font = fontSettigns;
+            btn_size15pt.Font = fontSettigns;
+            btn_size20pt.Font = fontSettigns;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -126,7 +128,7 @@ namespace JustForYou_Taschenrechner
 /////////////////////////////////////////////////////
 /*
  
- private Font fontSettings = new Font("Sergoe UI", 10);
+ private Font fontSettigns = new Font("Sergoe UI", 10);
         private (Color, Color, Color) mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
 
         private Einstellungen einstellungen = new Einstellungen();
@@ -134,7 +136,7 @@ namespace JustForYou_Taschenrechner
         private void btn_settings_Click(object sender, EventArgs e)
         {
             einstellungen.ShowDialog();
-            this.fontSettings = einstellungen.getFont();
+            this.fontSettigns = einstellungen.getFont();
             this.mode = einstellungen.getMode();
             changeFont();
         }
@@ -156,17 +158,17 @@ namespace JustForYou_Taschenrechner
             b_percent.BackColor = this.mode.Item1;
             b_school.BackColor = this.mode.Item1;
 
-            btn_settings.Font = this.fontSettings;
-            b_calc.Font = this.fontSettings;
-            b_close.Font = this.fontSettings;
-            b_credit.Font = this.fontSettings;
-            b_export.Font = this.fontSettings;
-            b_geometry.Font = this.fontSettings;
-            b_import.Font = this.fontSettings;
-            b_IT.Font = this.fontSettings;
-            b_math.Font = this.fontSettings;
-            b_percent.Font = this.fontSettings;
-            b_school.Font = this.fontSettings;
+            btn_settings.Font = this.fontSettigns;
+            b_calc.Font = this.fontSettigns;
+            b_close.Font = this.fontSettigns;
+            b_credit.Font = this.fontSettigns;
+            b_export.Font = this.fontSettigns;
+            b_geometry.Font = this.fontSettigns;
+            b_import.Font = this.fontSettigns;
+            b_IT.Font = this.fontSettigns;
+            b_math.Font = this.fontSettigns;
+            b_percent.Font = this.fontSettigns;
+            b_school.Font = this.fontSettigns;
 
             gb_branch.ForeColor = this.mode.Item3;
             l_history.ForeColor = this.mode.Item3;

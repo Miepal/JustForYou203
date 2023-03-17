@@ -11,13 +11,37 @@ namespace JustForYou_Taschenrechner
 {
     public partial class FensterProzentrechnung : Form
     {
-        public FensterProzentrechnung()
+        public FensterProzentrechnung(Font fontSettings, (Color, Color, Color) mode)
         {
             InitializeComponent();
         }
+        
+        // settings color, Font and more
+        private Font fontSettings = new Font("Sergoe UI", 10);
+        private (Color, Color, Color) mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
+
+        public (Font, (Color, Color, Color)) getFontSettings()
+        {
+            return (this.fontSettings,this.mode);
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            Einstellungen einstellungen = new Einstellungen();
+            einstellungen.ShowDialog();
+            this.fontSettings = einstellungen.getFont();
+            this.mode = einstellungen.getMode();
+            changeFont();
+            einstellungen = null;
+        }
+
+        ///////////////
+        // variables //
+        ///////////////
+
         modulProzentrechnung prcModule = new modulProzentrechnung();
 
-        private List<string> result = new List<string> {"0"};
+        private List<string> result = new List<string> {"NULL"};
         
         public List<string> getResult()
         {
@@ -145,6 +169,16 @@ namespace JustForYou_Taschenrechner
                 this.result.AddRange(resultsInsertModule);
             }
             this.Close();
+        }
+
+        private void b_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void changeFont()
+        {
+
         }
     }
 }

@@ -8,65 +8,65 @@ namespace Prozentrechnung
 {
     public class modulProzentrechnung
     {
-        List<string> results = new List<string> { };
+        string results;
         //ProzentDazu
-        public List<string> percentAdd(double baseValue, double percentage)
+        public string percentAdd(double baseValue, double percentage)
         {
-            results.Add(Convert.ToString(baseValue + (baseValue * percentage / 100)));
-            results.Add(String.Format("{0} + ({0} * {1} / 100)",baseValue,percentage));
-            return results;
+            //results.Add(Convert.ToString(baseValue + (baseValue * percentage / 100)));
+            //results.Add(String.Format("{0} + ({0} * {1} / 100)",baseValue,percentage));
+            return String.Format("{0} + ({0} * {1} / 100) = {2}", baseValue, percentage, baseValue + (baseValue * percentage / 100));
         }
         //ProzentWeg
-        public List<string> percentSub(double baseValue, double percentage)
+        public string percentSub(double baseValue, double percentage)
         {
-            results.Add(Convert.ToString(baseValue - (baseValue * percentage / 100)));
-            results.Add(String.Format("{0} - ({0} * {1} / 100)", baseValue, percentage));
-            return results;
+            //results.Add(Convert.ToString(baseValue - (baseValue * percentage / 100)));
+            //results.Add(String.Format("{0} - ({0} * {1} / 100)", baseValue, percentage));
+            return String.Format("{0} - ({0} * {1} / 100) = {2}", baseValue, percentage, baseValue - (baseValue * percentage / 100));
         }
         //ProzentDavon
-        public List<string> percentFrom(double baseValue, double percentage)
+        public string percentFrom(double baseValue, double percentage)
         {
-            results.Add(Convert.ToString(baseValue * (percentage / 100)));
-            results.Add(String.Format("{0} * ({1} / 100)", baseValue, percentage));
-            return results;
+            //results.Add(Convert.ToString(baseValue * (percentage / 100)));
+            //results.Add(String.Format("{0} * ({1} / 100)", baseValue, percentage));
+            return String.Format("{0} * ({1} / 100) = {2}", baseValue, percentage, baseValue * (percentage / 100));
         }
         //ProzentSatz
-        public List<string> percentage(double percentageValue, double baseValue)
+        public string percentage(double percentageValue, double baseValue)
         {
-            results.Add(Convert.ToString(percentageValue / baseValue));
-            results.Add(String.Format("{1} / {0}", baseValue, percentageValue));
-            return results;
+            //results.Add(Convert.ToString(percentageValue / baseValue));
+            //results.Add(String.Format("{1} / {0}", baseValue, percentageValue));
+            return String.Format("{1} / {0} = {2}", baseValue, percentageValue, percentageValue / baseValue);
         }
         //BruttoAusNetto
-        public List<string> bruttoFromNetto(double bruttoValue, bool groceries)
+        public string bruttoFromNetto(double bruttoValue, bool groceries)
         {
             if (groceries)
             {
-                results.Add(Convert.ToString(bruttoValue * 1.07));
-                results.Add(String.Format("{0} * 1.07", bruttoValue));
-                return results;
+                //results.Add(Convert.ToString(bruttoValue * 1.07));
+                //results.Add(String.Format("{0} * 1.07", bruttoValue));
+                return String.Format("{0} * 1.07 = {1}", bruttoValue, bruttoValue * 1.07);
             }
             else
             {
-                results.Add(Convert.ToString(bruttoValue * 1.19));
-                results.Add(String.Format("{0} * 1.19", bruttoValue));
-                return results;
+                //results.Add(Convert.ToString(bruttoValue * 1.19));
+                //results.Add(String.Format("{0} * 1.19", bruttoValue));
+                return String.Format("{0} * 1.19 = {1}", bruttoValue, bruttoValue * 1.19);
             }
         }
         //NettoAusBrutto
-        public List<string> nettoFromBrutto(double bruttoValue, bool groceries)
+        public string nettoFromBrutto(double bruttoValue, bool groceries)
         {
             if (groceries)
             {
-                results.Add(Convert.ToString(bruttoValue / 1.07));
-                results.Add(String.Format("{0} / 1.07", bruttoValue));
-                return results;
+                //results.Add(Convert.ToString(bruttoValue / 1.07));
+                //results.Add(String.Format("{0} / 1.07", bruttoValue));
+                return String.Format("{0} / 1.07 = {1}", bruttoValue, bruttoValue / 1.07);
             }
             else
             {
-                results.Add(Convert.ToString(bruttoValue / 1.19));
-                results.Add(String.Format("{0} / 1.19", bruttoValue));
-                return results;
+                //results.Add(Convert.ToString(bruttoValue / 1.19));
+                //results.Add(String.Format("{0} / 1.19", bruttoValue));
+                return String.Format("{0} / 1.19 = {1}", bruttoValue, bruttoValue / 1.19);
             }
         }
     }

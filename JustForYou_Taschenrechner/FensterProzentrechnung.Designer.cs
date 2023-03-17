@@ -107,6 +107,7 @@ namespace JustForYou_Taschenrechner
             this.b_back.TabIndex = 8;
             this.b_back.Text = "Schließen";
             this.b_back.UseVisualStyleBackColor = true;
+            this.b_back.Click += new System.EventHandler(this.b_back_Click);
             // 
             // button1
             // 

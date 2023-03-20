@@ -22,8 +22,9 @@ namespace KreditModul
         {
             long amount = Convert.ToInt64(crdAmount * 100);
             double calcZins = crdZins / 100 + 1;
-            long zins = Convert.ToInt64(amount * calcZins);
-            List<double> output = new List<double>{ Convert.ToDouble(amount)/100, crdZins, 0, crdRuntime, zins + amount/100, zins, 0 };
+            long sumPay = Convert.ToInt64(amount * calcZins);
+            long zins = sumPay - amount;
+            List<double> output = new List<double>{ Convert.ToDouble(amount)/100, crdZins, Convert.ToDouble(amount)/100, crdRuntime, sumPay/100, zins/100 };
             return toStringOutput(output);
         }
 
@@ -32,20 +33,20 @@ namespace KreditModul
             long amount = Convert.ToInt64(crdAmount * 100);
             long rate = Convert.ToInt64(amount / crdRuntime);
             double calcZins = crdZins / 100 + 1;
-            List<double> output = new List<double> { amount / 100, crdZins, rate / 100, crdRuntime, 0, 0 };
+            List<double> output = new List<double> { Convert.ToDouble(amount) / 100, crdZins, Convert.ToDouble(rate) / 100, crdRuntime, 0, 0 };
             long amountLeft = amount;
             long sumPay = 0;
             long allInterest = 0;
-            for (int i = 0; i < crdRuntime; i++)
+            for (int i = 0; i <= crdRuntime; i++)
             {
                 long interest = Convert.ToInt64(amountLeft * calcZins);
-                allInterest += interest;
-                long annul = rate + interest;
+                allInterest += interest - amountLeft;
+                long annul = interest - amountLeft + rate;
                 sumPay += annul;
                 amountLeft -= rate;
             }
-            output[4] = sumPay;
-            output[5] = allInterest;
+            output[4] = Convert.ToDouble(sumPay)/100;
+            output[5] = Convert.ToDouble(allInterest)/100;
             return toStringOutput(output);
         }
 

@@ -13,9 +13,28 @@ namespace JustForYou_Taschenrechner
     {
         private List<string> result = new List<string> {"0"};
 
-        public Grundrechner()
+        public Grundrechner(Font fontsettings, (Color, Color, Color) mode)
         {
             InitializeComponent();
+            this.mode = mode;
+            this.fontSettings = fontsettings;
+            changeFont();
+        }
+        private Font fontSettings;
+        private (Color, Color, Color) mode;
+
+        private void b_settings_Click(object sender, EventArgs e)
+        {
+            Einstellungen einstellungen = new Einstellungen(fontSettings, mode);
+            einstellungen.ShowDialog();
+            this.fontSettings = einstellungen.getFont().Item1;
+            this.mode = einstellungen.getFont().Item2;
+            changeFont();
+            einstellungen = null;
+        }
+        public (Font, (Color, Color, Color)) getFontSettings()
+        {
+            return (this.fontSettings, this.mode);
         }
 
         public List<string> getResult()
@@ -189,11 +208,6 @@ namespace JustForYou_Taschenrechner
             addFormula(tb_formula.Text + " = " + tmpResult);
         }
 
-        private void b_settings_Click(object sender, EventArgs e)
-        {
-            Einstellungen settings = new Einstellungen();
-        }
-
         private void btn_close_Click(object sender, EventArgs e)
         {
             Close();
@@ -317,6 +331,59 @@ namespace JustForYou_Taschenrechner
                 tb_formula.Clear();
                 return;
             }
+        }
+        private void changeFont()
+        {
+            this.BackColor = this.mode.Item2;
+            this.ForeColor = this.mode.Item3;
+
+            btn_close.BackColor = this.mode.Item1;
+            b_0.BackColor = this.mode.Item1;
+            b_1.BackColor = this.mode.Item1;
+            b_2.BackColor = this.mode.Item1;
+            b_3.BackColor = this.mode.Item1;
+            b_4.BackColor = this.mode.Item1;
+            b_5.BackColor = this.mode.Item1;
+            b_6.BackColor = this.mode.Item1;
+            b_7.BackColor = this.mode.Item1;
+            b_8.BackColor = this.mode.Item1;
+            b_9.BackColor = this.mode.Item1;
+            b_backspace.BackColor = this.mode.Item1;
+            b_clear.BackColor = this.mode.Item1;
+            b_closing.BackColor = this.mode.Item1;
+            b_comma.BackColor = this.mode.Item1;
+            b_divide.BackColor = this.mode.Item1;
+            b_equal.BackColor = this.mode.Item1;
+            b_minus.BackColor = this.mode.Item1;
+            b_multiply.BackColor = this.mode.Item1;
+            b_opening.BackColor = this.mode.Item1;
+            b_plus.BackColor = this.mode.Item1;
+            b_settings.BackColor = this.mode.Item1;
+            b_sign.BackColor = this.mode.Item1;
+
+            btn_close.Font = this.fontSettings;
+            b_0.Font = this.fontSettings;
+            b_1.Font = this.fontSettings;
+            b_2.Font = this.fontSettings;
+            b_3.Font = this.fontSettings;
+            b_4.Font = this.fontSettings;
+            b_5.Font = this.fontSettings;
+            b_6.Font = this.fontSettings;
+            b_7.Font = this.fontSettings;
+            b_8.Font = this.fontSettings;
+            b_9.Font = this.fontSettings;
+            b_backspace.Font = this.fontSettings;
+            b_clear.Font = this.fontSettings;
+            b_closing.Font = this.fontSettings;
+            b_comma.Font = this.fontSettings;
+            b_divide.Font = this.fontSettings;
+            b_equal.Font = this.fontSettings;
+            b_minus.Font = this.fontSettings;
+            b_multiply.Font = this.fontSettings;
+            b_opening.Font = this.fontSettings;
+            b_plus.Font = this.fontSettings;
+            b_settings.Font = this.fontSettings;
+            b_sign.Font = this.fontSettings;
         }
     }
 }

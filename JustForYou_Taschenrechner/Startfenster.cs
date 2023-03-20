@@ -15,6 +15,7 @@ namespace JustForYou_Taschenrechner
         public Startfenster()
         {
             InitializeComponent();
+            changeFont();
         }
 
         private Font fontSettings = new Font("Sergoe UI", 10);
@@ -22,22 +23,20 @@ namespace JustForYou_Taschenrechner
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            Einstellungen einstellungen = new Einstellungen();
+            Einstellungen einstellungen = new Einstellungen(fontSettings,mode);
             einstellungen.ShowDialog();
-            this.fontSettings = einstellungen.getFont();
-            this.mode = einstellungen.getMode();
+            this.fontSettings = einstellungen.getFont().Item1;
+            this.mode = einstellungen.getFont().Item2;
             changeFont();
             einstellungen = null;
         }
-         
+
         private void newSettigns(Font fontSettings, (Color, Color, Color) mode)
         {
             this.fontSettings = fontSettings;
             this.mode = mode;
+            changeFont();
         }
-
-
-
 
 
 
@@ -46,13 +45,14 @@ namespace JustForYou_Taschenrechner
 
         private void b_calc_Click(object sender, EventArgs e)
         {
-            Grundrechner calc = new Grundrechner();
+            Grundrechner calc = new Grundrechner(fontSettings,mode);
             calc.Show();
+            newSettigns(calc.getFontSettings().Item1, calc.getFontSettings().Item2);
         }
 
         private void b_close_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void b_percent_Click(object sender, EventArgs e)
@@ -67,6 +67,7 @@ namespace JustForYou_Taschenrechner
                     rTB_History.AppendText(element + "\n");
                 }
             }
+             newSettigns(prc.getFontSettings().Item1, prc.getFontSettings().Item2);
         }
 
         private void changeFont()

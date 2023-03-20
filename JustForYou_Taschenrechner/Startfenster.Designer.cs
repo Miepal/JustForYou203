@@ -75,7 +75,7 @@ namespace JustForYou_Taschenrechner
             this.gb_branch.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gb_branch.Location = new System.Drawing.Point(277, 69);
             this.gb_branch.Name = "gb_branch";
-            this.gb_branch.Size = new System.Drawing.Size(149, 371);
+            this.gb_branch.Size = new System.Drawing.Size(160, 371);
             this.gb_branch.TabIndex = 9;
             this.gb_branch.TabStop = false;
             this.gb_branch.Text = "Branchenauswahl";
@@ -84,7 +84,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_IT.Location = new System.Drawing.Point(6, 311);
             this.b_IT.Name = "b_IT";
-            this.b_IT.Size = new System.Drawing.Size(136, 51);
+            this.b_IT.Size = new System.Drawing.Size(148, 51);
             this.b_IT.TabIndex = 5;
             this.b_IT.Text = "Informationstechnik";
             this.b_IT.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_school.Location = new System.Drawing.Point(6, 254);
             this.b_school.Name = "b_school";
-            this.b_school.Size = new System.Drawing.Size(136, 51);
+            this.b_school.Size = new System.Drawing.Size(148, 51);
             this.b_school.TabIndex = 4;
             this.b_school.Text = "Schule";
             this.b_school.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_math.Location = new System.Drawing.Point(6, 197);
             this.b_math.Name = "b_math";
-            this.b_math.Size = new System.Drawing.Size(136, 51);
+            this.b_math.Size = new System.Drawing.Size(148, 51);
             this.b_math.TabIndex = 3;
             this.b_math.Text = "Mathematische Funktionen";
             this.b_math.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_geometry.Location = new System.Drawing.Point(6, 140);
             this.b_geometry.Name = "b_geometry";
-            this.b_geometry.Size = new System.Drawing.Size(136, 51);
+            this.b_geometry.Size = new System.Drawing.Size(148, 51);
             this.b_geometry.TabIndex = 2;
             this.b_geometry.Text = "Geometrie";
             this.b_geometry.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_credit.Location = new System.Drawing.Point(6, 83);
             this.b_credit.Name = "b_credit";
-            this.b_credit.Size = new System.Drawing.Size(136, 51);
+            this.b_credit.Size = new System.Drawing.Size(148, 51);
             this.b_credit.TabIndex = 1;
             this.b_credit.Text = "Kreditrechnung";
             this.b_credit.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_percent.Location = new System.Drawing.Point(6, 26);
             this.b_percent.Name = "b_percent";
-            this.b_percent.Size = new System.Drawing.Size(136, 51);
+            this.b_percent.Size = new System.Drawing.Size(148, 51);
             this.b_percent.TabIndex = 0;
             this.b_percent.Text = "Prozentrechnung";
             this.b_percent.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@ namespace JustForYou_Taschenrechner
             // b_close
             // 
             this.b_close.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_close.Location = new System.Drawing.Point(386, 12);
+            this.b_close.Location = new System.Drawing.Point(391, 12);
             this.b_close.Name = "b_close";
             this.b_close.Size = new System.Drawing.Size(40, 40);
             this.b_close.TabIndex = 10;
@@ -150,7 +150,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_export.Location = new System.Drawing.Point(283, 517);
             this.b_export.Name = "b_export";
-            this.b_export.Size = new System.Drawing.Size(136, 35);
+            this.b_export.Size = new System.Drawing.Size(148, 35);
             this.b_export.TabIndex = 11;
             this.b_export.Text = "Historie exportieren";
             this.b_export.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_import.Location = new System.Drawing.Point(283, 558);
             this.b_import.Name = "b_import";
-            this.b_import.Size = new System.Drawing.Size(136, 35);
+            this.b_import.Size = new System.Drawing.Size(148, 35);
             this.b_import.TabIndex = 12;
             this.b_import.Text = "Historie importieren";
             this.b_import.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.b_calc.Location = new System.Drawing.Point(283, 460);
             this.b_calc.Name = "b_calc";
-            this.b_calc.Size = new System.Drawing.Size(136, 51);
+            this.b_calc.Size = new System.Drawing.Size(148, 51);
             this.b_calc.TabIndex = 6;
             this.b_calc.Text = "Grundrechner";
             this.b_calc.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 601);
+            this.ClientSize = new System.Drawing.Size(449, 601);
             this.ControlBox = false;
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.b_calc);

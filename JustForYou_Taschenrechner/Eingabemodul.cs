@@ -11,7 +11,7 @@ namespace JustForYou_Taschenrechner
 {
     public partial class Eingabemodul : Form
     {
-        public Eingabemodul(List<String> moduleInput)
+        public Eingabemodul(List<String> moduleInput, Font fontSettings, (Color, Color, Color) mode)
         {
             InitializeComponent();
             variables = moduleInput;
@@ -21,19 +21,35 @@ namespace JustForYou_Taschenrechner
             }
 
             l_parameter.Text = moduleInput[i];
+            this.fontSettings = fontSettings;
+            this.mode = mode;
+            changeFont();
         }
         // settings color, Font and more
-        private Font fontSettings = new Font("Sergoe UI", 10);
-        private (Color, Color, Color) mode = (Color.FromName("Control Light"), Color.FromName("Control"), Color.FromName("ControlText"));
+        private Font fontSettings;
+        private (Color, Color, Color) mode;
+
+        public (Font, (Color, Color, Color)) getFontSettings()
+        {
+            return (this.fontSettings,this.mode);
+        }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            Einstellungen einstellungen = new Einstellungen();
+            Einstellungen einstellungen = new Einstellungen(fontSettings,mode);
             einstellungen.ShowDialog();
-            this.fontSettings = einstellungen.getFont();
-            this.mode = einstellungen.getMode();
+            this.fontSettings = einstellungen.getFont().Item1;
+            this.mode = einstellungen.getFont().Item2;
             changeFont();
             einstellungen = null;
+        }
+
+        private void newSettigns(Font fontSettings, (Color, Color, Color) mode)
+        {
+            this.fontSettings = fontSettings;
+            this.mode = mode;
+            changeFont();
+            //newSettigns(calc.getFontSettings().Item1, calc.getFontSettings().Item2);
         }
 
         ///////////////
@@ -64,7 +80,7 @@ namespace JustForYou_Taschenrechner
 
         private void btn_calc_Click(object sender, EventArgs e)
         {
-            Grundrechner basecalc = new Grundrechner();
+            Grundrechner basecalc = new Grundrechner(fontSettings,mode);
             basecalc.ShowDialog();
             List<string> baseCalcResults = basecalc.getResult();
             tb_input.Text = baseCalcResults[0];
@@ -73,8 +89,7 @@ namespace JustForYou_Taschenrechner
             {
                 results.Add(element);
             }
-
-
+            newSettigns(basecalc.getFontSettings().Item1, basecalc.getFontSettings().Item2);
         }
 
         private void btn_returnAsParameter_Click(object sender, EventArgs e)

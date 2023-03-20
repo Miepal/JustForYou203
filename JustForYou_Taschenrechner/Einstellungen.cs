@@ -15,6 +15,7 @@ namespace JustForYou_Taschenrechner
             InitializeComponent();
             this.fontSettigns = userFontSettigns;
             this.mode = mode;
+            setfontSettigns();
         }
 
         // private variables
@@ -22,13 +23,9 @@ namespace JustForYou_Taschenrechner
         private (Color, Color, Color) mode;
 
         // get methods
-        public Font getFont()
+        public (Font, (Color, Color, Color)) getFont()
         {
-            return this.fontSettigns;
-        }
-        public (Color, Color, Color) getMode()
-        {
-            return this.mode;
+            return (this.fontSettigns, mode);
         }
 
         // Button Click Events

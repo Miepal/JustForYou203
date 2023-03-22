@@ -50,6 +50,7 @@ namespace JustForYou_Taschenrechner
             // 
             this.rTB_History.Location = new System.Drawing.Point(13, 42);
             this.rTB_History.Name = "rTB_History";
+            this.rTB_History.ReadOnly = true;
             this.rTB_History.Size = new System.Drawing.Size(258, 551);
             this.rTB_History.TabIndex = 0;
             this.rTB_History.Text = "";
@@ -154,6 +155,7 @@ namespace JustForYou_Taschenrechner
             this.b_export.TabIndex = 11;
             this.b_export.Text = "Historie exportieren";
             this.b_export.UseVisualStyleBackColor = true;
+            this.b_export.Click += new System.EventHandler(this.b_export_Click);
             // 
             // b_import
             // 
@@ -163,6 +165,7 @@ namespace JustForYou_Taschenrechner
             this.b_import.TabIndex = 12;
             this.b_import.Text = "Historie importieren";
             this.b_import.UseVisualStyleBackColor = true;
+            this.b_import.Click += new System.EventHandler(this.b_import_Click);
             // 
             // b_calc
             // 

@@ -125,6 +125,7 @@ namespace JustForYou_Taschenrechner
             this.b_credit.TabIndex = 1;
             this.b_credit.Text = "Kreditrechnung";
             this.b_credit.UseVisualStyleBackColor = true;
+            this.b_credit.Click += new System.EventHandler(this.b_credit_Click);
             // 
             // b_percent
             // 

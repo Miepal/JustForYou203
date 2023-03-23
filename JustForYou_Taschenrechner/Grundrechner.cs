@@ -155,7 +155,10 @@ namespace JustForYou_Taschenrechner
 
         private void b_equal_Click(object sender, EventArgs e)
         {
-            check_forbidden_symbols();
+            if(check_forbidden_symbols())
+            {
+                return;
+            }
             string formula = tb_formula.Text;
             Regex numberBracketFront = new Regex("\\d\\(");
             
@@ -322,15 +325,16 @@ namespace JustForYou_Taschenrechner
             }
         }
 
-        private void check_forbidden_symbols()
+        private bool check_forbidden_symbols()
         {
-            Regex regex = new Regex("\\*\\*|\\*/|\\*\\+|/\\*|/\\+|\\+/|-/|\\+\\*|-\\*|\\d\\s\\d|,\\d*,");
+            Regex regex = new Regex("\\*\\*|\\*/|\\*\\+|/\\*|/\\+|\\+/|-/|\\+\\*|-\\*|\\d\\s\\d|,\\d*,|\\+\\+|\\-\\-|\\+\\-");
             if (regex.IsMatch(tb_formula.Text))
             {
                 MessageBox.Show("Fehlerhafte Eingabe!");
                 tb_formula.Clear();
-                return;
+                return true;
             }
+            return false;
         }
         private void changeFont()
         {

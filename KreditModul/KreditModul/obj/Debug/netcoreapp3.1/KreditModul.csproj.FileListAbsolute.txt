@@ -1,0 +1,10 @@
+C:\tmp\JustForYou203\KreditModul\KreditModul\bin\Debug\netcoreapp3.1\KreditModul.deps.json
+C:\tmp\JustForYou203\KreditModul\KreditModul\bin\Debug\netcoreapp3.1\KreditModul.dll
+C:\tmp\JustForYou203\KreditModul\KreditModul\bin\Debug\netcoreapp3.1\KreditModul.pdb
+C:\tmp\JustForYou203\KreditModul\KreditModul\obj\Debug\netcoreapp3.1\KreditModul.csproj.AssemblyReference.cache
+C:\tmp\JustForYou203\KreditModul\KreditModul\obj\Debug\netcoreapp3.1\KreditModul.GeneratedMSBuildEditorConfig.editorconfig
+C:\tmp\JustForYou203\KreditModul\KreditModul\obj\Debug\netcoreapp3.1\KreditModul.AssemblyInfoInputs.cache
+C:\tmp\JustForYou203\KreditModul\KreditModul\obj\Debug\netcoreapp3.1\KreditModul.AssemblyInfo.cs
+C:\tmp\JustForYou203\KreditModul\KreditModul\obj\Debug\netcoreapp3.1\KreditModul.csproj.CoreCompileInputs.cache
+C:\tmp\JustForYou203\KreditModul\KreditModul\obj\Debug\netcoreapp3.1\KreditModul.dll
+C:\tmp\JustForYou203\KreditModul\KreditModul\obj\Debug\netcoreapp3.1\KreditModul.pdb

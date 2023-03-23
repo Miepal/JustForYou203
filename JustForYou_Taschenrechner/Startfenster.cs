@@ -164,5 +164,16 @@ namespace JustForYou_Taschenrechner
             gb_branch.ForeColor = this.mode.Item3;
             l_history.ForeColor = this.mode.Item3;
         }
+
+        private void b_credit_Click(object sender, EventArgs e)
+        {
+            FensterKreditmodul crd = new FensterKreditmodul();
+            crd.ShowDialog();
+            List<string> crdResult = crd.getResult();
+            foreach (string elem in crdResult)
+            {
+                rTB_History.AppendText(elem + "\n");
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace JustForYou_Taschenrechner
 
         private void btn_single_credit_Click(object sender, EventArgs e)
         {
-            List<string> requested = new List<string> { "Kredithöhe", "Zinssatz", "Laufzeit" };
+            List<string> requested = new List<string> { "Kredithöhe in €", "Zinssatz in %", "Laufzeit in Monaten" };
             Eingabemodul insertModule = new Eingabemodul(requested);
             insertModule.ShowDialog();
             List<string> resultInput = insertModule.getResult();
@@ -42,7 +42,7 @@ namespace JustForYou_Taschenrechner
 
         private void btn_runtime_credit_Click(object sender, EventArgs e)
         {
-            List<string> requested = new List<string> { "Kredithöhe", "Zinssatz", "Laufzeit" };
+            List<string> requested = new List<string> { "Kredithöhe in €", "Zinssatz in %", "Laufzeit in Monaten" };
             Eingabemodul insertModule = new Eingabemodul(requested);
             insertModule.ShowDialog();
             List<string> resultInput = insertModule.getResult();
@@ -57,7 +57,7 @@ namespace JustForYou_Taschenrechner
 
         private void btn_rate_credit_Click(object sender, EventArgs e)
         {
-            List<string> requested = new List<string> { "Kredithöhe", "Zinssatz", "Rate" };
+            List<string> requested = new List<string> { "Kredithöhe in €", "Zinssatz in %", "Rate in €" };
             Eingabemodul insertModule = new Eingabemodul(requested);
             insertModule.ShowDialog();
             List<string> resultInput = insertModule.getResult();

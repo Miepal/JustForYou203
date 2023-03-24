@@ -1,0 +1,10 @@
+C:\tmp\JustForYou203\Geometrie\Geometrie\bin\Debug\netcoreapp3.1\Geometrie.deps.json
+C:\tmp\JustForYou203\Geometrie\Geometrie\bin\Debug\netcoreapp3.1\Geometrie.dll
+C:\tmp\JustForYou203\Geometrie\Geometrie\bin\Debug\netcoreapp3.1\Geometrie.pdb
+C:\tmp\JustForYou203\Geometrie\Geometrie\obj\Debug\netcoreapp3.1\Geometrie.csproj.AssemblyReference.cache
+C:\tmp\JustForYou203\Geometrie\Geometrie\obj\Debug\netcoreapp3.1\Geometrie.GeneratedMSBuildEditorConfig.editorconfig
+C:\tmp\JustForYou203\Geometrie\Geometrie\obj\Debug\netcoreapp3.1\Geometrie.AssemblyInfoInputs.cache
+C:\tmp\JustForYou203\Geometrie\Geometrie\obj\Debug\netcoreapp3.1\Geometrie.AssemblyInfo.cs
+C:\tmp\JustForYou203\Geometrie\Geometrie\obj\Debug\netcoreapp3.1\Geometrie.csproj.CoreCompileInputs.cache
+C:\tmp\JustForYou203\Geometrie\Geometrie\obj\Debug\netcoreapp3.1\Geometrie.dll
+C:\tmp\JustForYou203\Geometrie\Geometrie\obj\Debug\netcoreapp3.1\Geometrie.pdb

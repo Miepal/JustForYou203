@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "JustForYou_Taschenrechner/1.0.0": {
+        "dependencies": {
+          "KreditModul": "1.0.0.0",
+          "MatheModul": "1.0.0.0",
+          "Prozentrechnung": "1.0.0.0"
+        },
+        "runtime": {
+          "JustForYou_Taschenrechner.dll": {}
+        }
+      },
+      "KreditModul/1.0.0.0": {
+        "runtime": {
+          "KreditModul.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MatheModul/1.0.0.0": {
+        "runtime": {
+          "MatheModul.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Prozentrechnung/1.0.0.0": {
+        "runtime": {
+          "Prozentrechnung.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JustForYou_Taschenrechner/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KreditModul/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MatheModul/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Prozentrechnung/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

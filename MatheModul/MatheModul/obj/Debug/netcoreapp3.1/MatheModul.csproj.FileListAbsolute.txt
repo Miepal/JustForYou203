@@ -1,0 +1,10 @@
+C:\tmp\JustForYou203\MatheModul\MatheModul\bin\Debug\netcoreapp3.1\MatheModul.deps.json
+C:\tmp\JustForYou203\MatheModul\MatheModul\bin\Debug\netcoreapp3.1\MatheModul.dll
+C:\tmp\JustForYou203\MatheModul\MatheModul\bin\Debug\netcoreapp3.1\MatheModul.pdb
+C:\tmp\JustForYou203\MatheModul\MatheModul\obj\Debug\netcoreapp3.1\MatheModul.csproj.AssemblyReference.cache
+C:\tmp\JustForYou203\MatheModul\MatheModul\obj\Debug\netcoreapp3.1\MatheModul.GeneratedMSBuildEditorConfig.editorconfig
+C:\tmp\JustForYou203\MatheModul\MatheModul\obj\Debug\netcoreapp3.1\MatheModul.AssemblyInfoInputs.cache
+C:\tmp\JustForYou203\MatheModul\MatheModul\obj\Debug\netcoreapp3.1\MatheModul.AssemblyInfo.cs
+C:\tmp\JustForYou203\MatheModul\MatheModul\obj\Debug\netcoreapp3.1\MatheModul.csproj.CoreCompileInputs.cache
+C:\tmp\JustForYou203\MatheModul\MatheModul\obj\Debug\netcoreapp3.1\MatheModul.dll
+C:\tmp\JustForYou203\MatheModul\MatheModul\obj\Debug\netcoreapp3.1\MatheModul.pdb

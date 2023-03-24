@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
-      "projectName": "JustForYou_Taschenrechner",
-      "projectPath": "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
+      "projectUniqueName": "C:\\tmp\\JustForYou203\\Geometrie\\Geometrie\\Geometrie.csproj",
+      "projectName": "Geometrie",
+      "projectPath": "C:\\tmp\\JustForYou203\\Geometrie\\Geometrie\\Geometrie.csproj",
       "packagesPath": "C:\\Users\\goltschma\\.nuget\\packages\\",
-      "outputPath": "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\obj\\",
+      "outputPath": "C:\\tmp\\JustForYou203\\Geometrie\\Geometrie\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,9 +63,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"

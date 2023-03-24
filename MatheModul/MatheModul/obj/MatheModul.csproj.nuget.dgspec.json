@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj": {}
+    "C:\\tmp\\JustForYou203\\MatheModul\\MatheModul\\MatheModul.csproj": {}
   },
   "projects": {
-    "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj": {
+    "C:\\tmp\\JustForYou203\\MatheModul\\MatheModul\\MatheModul.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
-        "projectName": "JustForYou_Taschenrechner",
-        "projectPath": "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\JustForYou_Taschenrechner.csproj",
+        "projectUniqueName": "C:\\tmp\\JustForYou203\\MatheModul\\MatheModul\\MatheModul.csproj",
+        "projectName": "MatheModul",
+        "projectPath": "C:\\tmp\\JustForYou203\\MatheModul\\MatheModul\\MatheModul.csproj",
         "packagesPath": "C:\\Users\\goltschma\\.nuget\\packages\\",
-        "outputPath": "C:\\tmp\\JustForYou203\\JustForYou_Taschenrechner\\obj\\",
+        "outputPath": "C:\\tmp\\JustForYou203\\MatheModul\\MatheModul\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,9 +56,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
